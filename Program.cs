@@ -87,7 +87,6 @@ namespace Hangman
                                 {
                                     if (cInput[i] == cAnswer[j])
                                     {
-                                        //hiddenLineAsStringBuilder.Replace(hiddenLineAsStringBuilder[j], cInput[i]);
                                         hiddenLineAsStringBuilder[j] = cInput[i];
                                         Console.WriteLine(hiddenLineAsStringBuilder);
                                         correct.Insert(correct.Length, cInput[i]);
@@ -102,6 +101,7 @@ namespace Hangman
                                 {
                                     wrong.Insert(wrong.Length, cInput[i]);
                                     guesses--;
+                                    break;
                                 }
                                 
                             }
