@@ -63,13 +63,13 @@ namespace Hangman
                                     if (cInput[i] == cAnswer[j])
                                     {
                                         hiddenLineAsStringBuilder[j] = cInput[i];
-                                        Console.WriteLine(hiddenLineAsStringBuilder);
                                         correct.Insert(correct.Length, cInput[i]);
                                         if (hiddenLineAsStringBuilder.ToString() == answer)
                                         {
                                             Console.WriteLine("Winner!");
                                             end = true;
                                         }
+
                                     }
                                 }
                                 else if (!answer.Contains(cInput[i]))
@@ -78,7 +78,6 @@ namespace Hangman
                                     guesses--;
                                     break;
                                 }
-                                
                             }
                         }
                         Console.WriteLine("Correct : " + "[" + correct + "]");
